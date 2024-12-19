@@ -1,13 +1,10 @@
 import {
     Dialog,
     DialogContent,
-    DialogHeader,
-    DialogTitle,
     DialogClose,
   } from "@/components/ui/dialog";
   import Logo from "@/assets/Logo.png"
 import { User } from "@/constant";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 
   

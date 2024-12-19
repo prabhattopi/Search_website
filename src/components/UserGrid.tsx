@@ -2,7 +2,7 @@ import { User } from "@/constant";
 import { UserCard } from "./UserCard";
 import NotFound from "@/assets/Not_Found.png";
 interface UserGridProps {
-  users: any;
+  users: User[];
   query: string;
   onFetchDetails: (userId: number) => void;
   searching:boolean;
