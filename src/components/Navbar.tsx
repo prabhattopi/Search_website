@@ -7,19 +7,28 @@ const Navbar = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const links = [
-    { to: "/search", label: "SEARCH" },
-    { to: "/website", label: "WEBSITE" },
-    { to: "/linkedin", label: "LINKEDIN" },
-    { to: "/contact", label: "CONTACT" },
+    { to: "/", label: "SEARCH" },
+    { to: "https://girmantech.com", label: "WEBSITE" },
+    { to: "https://www.linkedin.com/company/girmantech", label: "LINKEDIN" },
+    { to: "mailto:contact@girmantech.com?subject=Hire Me&body=I wanted to reach out about..", label: "CONTACT" },
   ];
   return (
-    <nav className="flex flex-col fixed top-0 w-full h-[60px]  z-30">
+    <nav className="flex  flex-col sticky top-0 w-full h-[60px]  z-30">
       <div
-        className={`bg-white drop-shadow ${flexBetween} transition-all duration-200 w-full h-full`}
+        className={`bg-white  drop-shadow ${flexBetween} transition-all duration-200 w-full h-full`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
+            <div className="flex gap-2">
             <img className="max-w-[60px] h-[40px]" src={Logo} alt="logo" />
+            <div className="flex flex-col justify-start relative">
+              <h2 className="text-[25px] font-bold mt-[-10px]">Girman</h2>
+              
+              <span className="text-[10px] absolute uppercase font-bold leading-6 -bottom-1">Tenchnologies</span>
+
+            </div>
+            </div>
+          
 
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
@@ -52,7 +61,7 @@ const Navbar = () => {
       {/* mobile menu */}
       {!isAboveMediumScreens && isMenuToggled && (
         //exact me brackets lagao samjh me ayya kya
-        <div className="fixed right-0 z-40 h-full w-full bg-white px-4 py-4 drop-shadow-xl">
+        <div className="sticky right-0 z-40 h-full w-full bg-white px-4 py-4 drop-shadow-xl">
           {/* close icon */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
