@@ -1,7 +1,7 @@
 import { SearchInput } from "@/components/SearchInput";
 import { UserGrid } from "@/components/UserGrid";
 import { User } from "@/constant";
-import  sampleUsers  from '@/data/data.json';
+import  sampleUsers  from '@/Data/data.json';
 import { useState } from "react";
 
 const HomePage = () => {
